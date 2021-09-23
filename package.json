@@ -9,7 +9,8 @@
     "@xmldom/xmldom": "^0.7.5",
     "copyfiles": "^2.4.1",
     "eslint": "^7.32.0",
-    "http-server": "^13.0.2"
+    "http-server": "^13.0.2",
+    "npm-commands": "^1.1.0"
   },
   "main": "popup.html",
   "directories": {
@@ -20,7 +21,8 @@
     "postinstall": "copyfiles -V -u 1 node_modules/jszip/dist/jszip.min.js plugin",
     "test": "http-server -o unitTest/Tests.html",
     "lint": "cd eslint && node pack.js && eslint packed.js",
-    "build": "cd eslint && node pack.js"
+    "build": "cd eslint && node pack.js",
+    "release": "node eslint/release.js"
   },
   "repository": {
     "type": "git",
